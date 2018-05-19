@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon"  type="image/png" href="images/sq2.png">
+    <title>Cafeteria</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="styles.css" type="text/css">-->
+    <title>Cafeteria</title>
+    <style media="screen">
+      .loggedin-div{
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="header text-white bg-danger p-2">
+        <h1 class="ml-5">Cafeteria</h1>
+        <div id="user_div" class="loggedin-div">
+          <p id="user_para">welcome</p>
+          <button class="btn btn-dark" onclick="logout()">Logout</button>
+        </div>
+          </div>
+
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-3 offset-md-2">
+          <div class="card mb-4">
+            <a href="templates/archi-food.html"><img class="card-img-top p-2" src="images/archi.png" alt="Card image cap"></a>
+            <div class ="card-body">
+              <h5 class="card-title">Architecture canteen</h5>
+              <hr>
+              <p class="card-text">Order Food from Architecture canteen</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 offset-md-2">
+          <div class="card">
+            <a href="templates/tq-food.html"><img class="card-img-top p-2" src="images/tq.png" alt="Card image cap"></a>
+            <div class="card-body">
+              <h5 class="card-title">TQ</h5>
+              <hr>
+              <p class="card-text">Order food from TQ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-3 offset-md-2">
+          <div class="card mb-4">
+          <a href="templates/boys-canteen-food.html">  <img class="card-img-top p-2" src="images/boyscanteen.png" alt="Card image cap"></a>
+            <div class="card-body">
+              <h5 class="card-title">Boys Canteen</h5>
+              <hr>
+              <p class="card-text">Order food from boys hostel canteen</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 offset-md-2">
+          <div class="card">
+            <a href="templates/girls-canteen-food.html"><img class="card-img-top p-2" src="images/girlscanteen.png" alt="Card image cap"></a>
+            <div class="card-body">
+              <h5 class="card-title">Girls Canteen</h5>
+              <hr>
+              <p class="card-text">Order food from girls hostel canteen</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 offset-md-2">
+          <div class="card">
+
+            <a href="fc.html"><img class="card-img-top p-2" src="images/food-menu.png" alt="Card image cap"></a>
+            <div class="card-body">
+              <h5 class="card-title">Food Court</h5>
+              <hr>
+              <p class="card-text">Order food from food court</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA570AG298zJz3-c773l1m4wDZUG9z1TAU",
+        authDomain: "cafeteriaadmin.firebaseapp.com",
+        databaseURL: "https://cafeteriaadmin.firebaseio.com",
+        projectId: "cafeteriaadmin",
+        storageBucket: "cafeteriaadmin.appspot.com",
+        messagingSenderId: "161911110841"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script type="text/javascript" src="index.js"></script>
+    <!-- <script type="text/javascript" src="login.js"></script> -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon"  type="image/png" href="images/sq2.png">
+    <title>Cafeteria</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <style type="text/css">
+    body .container-fluid{
+      background-color: #ece8e8;
+    }
+    div .headline{
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -8px;
+      margin-left: -10px;
+    }
+    .main-content{
+      text-align: center;
+    }
+    #username{
+      width:50%;
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid grey;
+    }
+    #password{
+      width:50%;
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid grey;
+    }
+    #username:focus{
+      width:50%;
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid black;
+    }
+    #password:focus{
+      width:50%;
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid black;
+    }
+
+    .heading{
+      font-family: cursive;
+    }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="header text-white bg-dark p-2">
+      <div class="row headline">
+        <div class="col-md-1">
+          <img src="images/sq2.png" class="img-responsive thumbnail" height="70px" width="70px">
+        </div>
+        <div class="col-md-10 heading">
+          <h1 class="text-center">Cafeteria</h1>
+        </div>
+      </div>
+        <div class="header">
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+          <div class="card">
+            <img src="images/logo.png" alt="Card image cap"  class="img-responsive m-auto card-image-top">
+              <div class="card-body text-center">
+                <form class="main-content" name="form1" action="JavaScript:login()" method="post">
+                    <input type="text" name="Email" id="username" placeholder="Enter your Email ID" required><br><br>
+                    <input type="password" name="password" placeholder="Password" id="password" required><br><br>
+                    <button type="submit" class="btn btn-dark">LOGIN</button>
+                    <br><br>
+                    <!-- <button type="button" class="btn btn-dark" onclick="create_account()">Sign Up</button> -->
+                    <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-dark" onclick="create_account()"  data-toggle="modal" data-target="#signup">
+                          Sign Up
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Send Verification</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="header text-white bg-danger p-2">
+                                  <h1 class="ml-5">Cafeteria</h1>
+
+                                  <div id="user_div" class="loggedin-div">
+                                    <p id="user_para">welcome</p>
+                                    <button class="btn btn-dark" onclick="logout()">Logout</button>
+                                  </div>
+                                    </div>
+                                    <br><br>
+
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-dark" id="verify_btn" onclick="send_verification()">Send Verification</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+
+                </form>
+              </div>
+          </div>
+          <br><br><br><br>
+        </div>
+    </div>
+</div>
+
+      <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+          var config = {
+          apiKey: "AIzaSyA570AG298zJz3-c773l1m4wDZUG9z1TAU",
+          authDomain: "cafeteriaadmin.firebaseapp.com",
+          databaseURL: "https://cafeteriaadmin.firebaseio.com",
+          projectId: "cafeteriaadmin",
+          storageBucket: "cafeteriaadmin.appspot.com",
+          messagingSenderId: "161911110841"
+          };
+        firebase.initializeApp(config);
+        </script>
+      <script type="text/javascript" src="index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Archi canteen menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon"  type="image/png" href="images/sq2.png">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="index.css" rel="stylesheet">
+  </head>
+  <body>
+    <style>
+    body{
+      background-color: grey;
+    }
+  .topnav {
+    overflow: hidden;
+  }
+
+  .topnav a {
+    padding: 5px 5px;
+    display: block;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .topnav a:hover {
+    border-bottom: 3px solid red;
+  }
+  .topnav a.active {
+    border-bottom: 3px solid red;
+  }
+
+  </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="topnav bg-dark">
+          <div class="container">
+            <div class="row text-white m-2">
+                <h1>Architecture Canteen</h1>
+            </div>
+          </div>
+
+            <div class="row">
+          <div class="col-md-6">
+          <a class="nav active text-white text-center" href="archi-food.html">Food</a>
+        </div>
+        <div class="col-md-6">
+          <a class="nav text-white text-center" href="archi-beverages.html">Beverages</a>
+        </div>
+        </div>
+      </div>
+      <div class="shopping-cart">
+      <!-- Title -->
+  <!--    <div class="title m-4">
+        <h1>Shopping Bag</h1>
+      </div>-->
+      <!-- Product #1 -->
+      <div class="items">
+          <!-- <button type="button" name="button" class="btn btn-primary addtocart">Add to cart</button> -->
+      </div>
+      <div class="total-price">total price</div>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA570AG298zJz3-c773l1m4wDZUG9z1TAU",
+        authDomain: "cafeteriaadmin.firebaseapp.com",
+        databaseURL: "https://cafeteriaadmin.firebaseio.com",
+        projectId: "cafeteriaadmin",
+        storageBucket: "cafeteriaadmin.appspot.com",
+        messagingSenderId: "161911110841"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="archi-food.js"></script>
+  </body>
+</html>

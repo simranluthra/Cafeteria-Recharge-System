@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <style media="screen">
+    .main-content{
+      text-align: center;
+    }
+    #email{
+      width:50%;
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid grey;
+    }
+    #password{
+      width:50%;
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid grey;
+    }
+    #email:focus{
+      width:50%;
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid black;
+    }
+    #password:focus{
+      width:50%;
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid black;
+    }
+
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Sign up</title>
+
+  </head>
+  <body>
+    <div class="header text-white bg-danger p-2">
+      <h1 class="ml-5">Cafeteria</h1>
+      <div class="header">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+          <div class="card">
+            <img src="images/logo.png" alt="Card image cap"  class="img-responsive m-auto card-image-top">
+              <div class="card-body text-center">
+                <form action="javascript:signup()" class="main-content">
+                <div class="text-center content">
+                  <input type="text" name="Email" id="email" placeholder="Enter your Email ID" required><br><br>
+                  <input type="password" name="password" placeholder="Password" id="password" required><br><br>
+                <button class="btn btn-dark">SIGN UP</button><br><br>
+                </div>
+                </form>
+                <a href="login.html"><button class="btn btn-dark">LOGIN</button></a>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+      <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+      <script>
+      // Initialize Firebase
+      var config = {
+      apiKey: "AIzaSyA570AG298zJz3-c773l1m4wDZUG9z1TAU",
+      authDomain: "cafeteriaadmin.firebaseapp.com",
+      databaseURL: "https://cafeteriaadmin.firebaseio.com",
+      projectId: "cafeteriaadmin",
+      storageBucket: "cafeteriaadmin.appspot.com",
+      messagingSenderId: "161911110841"
+      };
+      firebase.initializeApp(config);
+      </script>
+        <script type="text/javascript" src="sign.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
